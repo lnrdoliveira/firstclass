@@ -16,10 +16,9 @@ class Program{
         y.B = double.Parse(System.Console.ReadLine(), CultureInfo.InvariantCulture);
         y.C = double.Parse(System.Console.ReadLine(), CultureInfo.InvariantCulture);
 
-        double P = (x.A + x.B + x.C) / 2.0;
-        double areaX =  Math.Sqrt(P*(P-x.A)*(P-x.B)*(P-x.C));
-        P = (y.A + y.B + y.C)/2.0;
-        double areaY = Math.Sqrt(P*(P-y.A)*(P-y.B)*(P-y.C));
+       
+        double areaX = x.Area();
+        double areaY = y.Area();
         System.Console.WriteLine("Área de x= "+areaX.ToString("F4", CultureInfo.InvariantCulture));
         System.Console.WriteLine("Área de y= "+areaY.ToString("F4", CultureInfo.InvariantCulture));
         if(areaX > areaY){
